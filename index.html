@@ -1,0 +1,92 @@
+
+<!--if you read this you like cum and jinx-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Yago</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="image/jpg" href="logo1.jpg"/>
+  
+    <meta property="og:title" content="jinx" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jinxkate.000webhostapp.com" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="jinx" />
+    <meta name="theme-color" content="#AA8DFF">
+  
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.2.5/rythm.min.js"></script>
+  </head>
+  
+  <body class="animate__animated animate__fadeIn">
+    <div id="wrapper">
+      <div id="particles-js"></div>
+      <script src="./assets/particles.js"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> 
+      <div id="preload">
+        <h2><font color="#959fb4">🌍</h2>
+      </div>
+      <div id="hidden">
+        <div id='selector'/>
+        <div id="main">
+          <div class="bass blur1">
+            <img src="logo1.jpg" id="glow">
+          </div>
+          <h5>notyagoo</h5>
+          <h6>Yago#1337</h6>
+         <a href="https://steamcommunity.com/id/notyagoo/"><h6>Steam</h6></a>
+         <h6></h6>
+        </div>
+        </div>
+  
+        <div id="links">
+          <div class="menu">
+            <h5><font color="#AA8DFF">  </h5>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay-top-right"></div>
+  <div class="overlay-bottom-right"></div>
+  
+    <audio
+      id="music"
+      class="music"
+      src="assets/music.mp3"
+      autoplay
+      loop
+      onplaying=""
+      style="display: none"
+    ></audio>
+    <script>
+      document.getElementById("music").pause();
+      document.getElementById("hidden").style = "opacity: 0; transition: 2s;";
+  
+      document.addEventListener("mousedown", handleMouseDown);
+  
+      function handleMouseDown() {
+        document.getElementById("music").play();
+        document.getElementById("preload").style =
+          "opacity: 0; transition: 0.6s;";
+  
+        document.getElementById("hidden").style = "opacity: 1; transition: 2s;";
+  
+        var rythm = new Rythm();
+        rythm.addRythm("blur1", "blur", 0, 250);
+        rythm.addRythm('bass', 'pulse', 0, 10, {
+                min: 0.6,
+                max: 0.8
+              })
+        rythm.connectExternalAudioElement(document.getElementById("music"));
+        rythm.setGain(0.07);
+        rythm.start();
+        document.getElementById("music").play();
+        document.removeEventListener("mousedown", handleMouseDown);
+      }
+    </script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </body>
+  
